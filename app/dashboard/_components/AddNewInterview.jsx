@@ -75,30 +75,30 @@ function AddNewInterview() {
     const inputPrompt = `Job position: ${jobPosition}, Job Description: ${jobDescription}, Years of Experience: ${jobExperience}.
     Generate ${process.env.NEXT_PUBLIC_INTERVIEW_QUESTION_COUNT} interview questions and answers in JSON format.`;
     const result = await chatSession.sendMessage(inputPrompt);
-    const cleanedResponse = (result.response.text()).replace('```json','').replace('```','')
-    const mockResponse = JSON.parse(cleanedResponse);
-    setJsonResponse(cleanedResponse);
-      
-    if(cleanedResponse){
-      const res = await db.insert(MockInterview)
-        .values({
-          mockId: uuidv4(),
-          jsonMockResp: JSON.stringify(mockResponse),
-          jobPosition: jobPosition,
-          jobDesc: jobDescription,
-          jobExperience: jobExperience,
-          createdBy: user?.primaryEmailAddress?.emailAddress,
-          createdAt: moment().format('DD-MM-YYYY'),
-        }).returning({ mockId: MockInterview.mockId });
+    try {
+      const mockResponse = JSON.parse(result.response.text());
+      setJsonResponse(result.response.text());
+
+      if (mockResponse) {
+        const res = await db.insert(MockInterview)
+          .values({
+            mockId: uuidv4(),
+            jsonMockResp: JSON.stringify(mockResponse),
+            jobPosition: jobPosition,
+            jobDesc: jobDescription,
+            jobExperience: jobExperience,
+            createdBy: user?.primaryEmailAddress?.emailAddress,
+            createdAt: moment().format('DD-MM-YYYY'),
+          }).returning({ mockId: MockInterview.mockId });
         toast.success('Interview questions generated successfully!');
-      router.push('/dashboard/interview/' + res[0]?.mockId);
-      
+        router.push('/dashboard/interview/' + res[0]?.mockId);
+      }
+    } catch (error) {
+      console.error("Error parsing JSON response:", error);
+      toast.error('Failed to parse interview questions.');
+    } finally {
+      setLoading(false);
     }
-    else{  
-      console.error("Error generating interview:", error);
-      toast.error('Failed to generate interview questions.');
-    }
-    setLoading(false);
   };
 
   return (
