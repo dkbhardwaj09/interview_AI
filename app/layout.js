@@ -23,10 +23,10 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://www.prepsterai.com'),
+  metadataBase: new URL('https://www.nexthireai.com'),
   title: {
-    default: 'Prepster AI: Practice. Perfect. Perform',
-    template: '%s | Prepster AI'
+    default: 'NextHire AI: Your AI Interview Coach',
+    template: '%s | NextHire AI'
   },
   description: 'Elevate your interview skills with AI-powered mock interviews. Get personalized coaching, real-time feedback, and boost your confidence.',
   keywords: [
@@ -36,32 +36,32 @@ export const metadata = {
     'career development', 
     'job interview help'
   ],
-  authors: [{ name: 'Prepster AI Team' }],
-  creator: 'Prepster AI',
-  publisher: 'Prepster AI',
+  authors: [{ name: 'D3bhardwaj' }],
+  creator: 'D3bhardwaj',
+  publisher: 'D3bhardwaj',
   
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://mockmateai-eta.vercel.app/',
-    title: 'Prepster AI: Practice. Perfect. Perform',
+    url: 'https://nexthireai.vercel.app/',
+    title: 'NextHire AI: Your AI Interview Coach',
     description: 'Elevate your interview skills with AI-powered mock interviews. Get personalized coaching, real-time feedback, and boost your confidence.',
-    siteName: 'Prepster AI',
+    siteName: 'NextHire AI',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Prepster AI - Revolutionizing Interview Preparation'
+        alt: 'NextHire AI - Revolutionizing Interview Preparation'
       }
     ]
   },
   
   twitter: {
     card: 'summary_large_image',
-    title: 'Prepster AI - AI-Powered Interview Preparation',
+    title: 'NextHire AI - AI-Powered Interview Preparation',
     description: 'Elevate your interview skills with AI-powered mock interviews. Get personalized coaching, real-time feedback, and boost your confidence.',
-    creator: '@PrepsterAI',
+    creator: '@D3bhardwaj',
     images: ['/twitter-image.png']
   },
   

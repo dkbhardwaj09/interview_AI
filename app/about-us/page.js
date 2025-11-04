@@ -17,8 +17,8 @@ const AboutUsPage = () => {
       icon: <Target className="mr-2 text-indigo-600" />,
       content: (
         <div className="space-y-4">
-          <p className="text-base md:text-lg">At Prepster AI, we&apos;re redefining interview preparation with smart, personalized coaching powered by advanced AI. Our mission is to empower you with tailored guidance and intelligent practice—helping you confidently pursue your unique career goals and stand out in every interview.</p>
-          <p className="text-base md:text-lg">With PrepsterAI, the goal is to bridge the gap between preparation and success, empowering users to unlock their full potential.</p>
+          <p className="text-base md:text-lg">At NextHire AI, we&apos;re redefining interview preparation with smart, personalized coaching powered by advanced AI. Our mission is to empower you with tailored guidance and intelligent practice—helping you confidently pursue your unique career goals and stand out in every interview.</p>
+          <p className="text-base md:text-lg">With NextHireAI, the goal is to bridge the gap between preparation and success, empowering users to unlock their full potential.</p>
         </div>
       )
     },
@@ -26,7 +26,7 @@ const AboutUsPage = () => {
       icon: <BookOpen className="mr-2 text-indigo-600" />,
       content: (
         <div className="space-y-4">
-          <p className="text-base md:text-lg">Prepster AI was inspired by real-life struggles with interview preparation. Our Team set out to build a platform that makes interview prep simple, effective, and confidence-boosting for everyone. Our goal is to help you overcome the stress and uncertainty of interviews—so you can focus on showcasing your true potential.</p>
+          <p className="text-base md:text-lg">NextHire AI was inspired by real-life struggles with interview preparation. D3bhardwaj set out to build a platform that makes interview prep simple, effective, and confidence-boosting for everyone. Our goal is to help you overcome the stress and uncertainty of interviews—so you can focus on showcasing your true potential.</p>
           <p className="text-base md:text-lg">This journey has been a testament to the power of passion and innovation, leading to the creation of an impactful tool for career growth.</p>
         </div>
       )
@@ -35,7 +35,7 @@ const AboutUsPage = () => {
       icon: <Rocket className="mr-2 text-indigo-600" />,
       content: (
         <div className="space-y-4">
-          <p className="text-base md:text-lg">PrepsterAI leverages advanced AI algorithms to generate dynamic, contextually relevant interview questions based on your professional background and goals.</p>
+          <p className="text-base md:text-lg">NextHireAI leverages advanced AI algorithms to generate dynamic, contextually relevant interview questions based on your professional background and goals.</p>
           <p className="text-base md:text-lg">Through real-time analysis and feedback, the platform provides actionable insights, enabling users to improve with every mock interview attempt.</p>
         </div>
       )
@@ -66,7 +66,7 @@ const AboutUsPage = () => {
         {/* Hero Section */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900">
-            About PrepsterAI
+            About NextHireAI
           </h1>
           <p className="mt-4 max-w-xl mx-auto text-base sm:text-lg md:text-xl text-gray-600 px-4">
             Empowering professionals to ace interviews through intelligent, personalized AI coaching
