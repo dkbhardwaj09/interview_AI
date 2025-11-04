@@ -74,8 +74,9 @@ function AddNewInterview() {
   
     const inputPrompt = `Job position: ${jobPosition}, Job Description: ${jobDescription}, Years of Experience: ${jobExperience}.
     Generate ${process.env.NEXT_PUBLIC_INTERVIEW_QUESTION_COUNT} interview questions and answers in JSON format.`;
-    const result = await chatSession.sendMessage(inputPrompt);
+
     try {
+      const result = await chatSession.sendMessage(inputPrompt);
       const mockResponse = JSON.parse(result.response.text());
       setJsonResponse(result.response.text());
 
@@ -94,8 +95,8 @@ function AddNewInterview() {
         router.push('/dashboard/interview/' + res[0]?.mockId);
       }
     } catch (error) {
-      console.error("Error parsing JSON response:", error);
-      toast.error('Failed to parse interview questions.');
+      console.error("Error generating interview:", error);
+      toast.error('There was an error generating the interview questions. Please try again later.');
     } finally {
       setLoading(false);
     }
