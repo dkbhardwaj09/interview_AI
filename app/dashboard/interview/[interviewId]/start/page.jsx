@@ -28,7 +28,8 @@ const StartInterview = ({ params }) => {
         .where(eq(MockInterview.mockId, params.interviewId));
       
       const jsonMockResp = JSON.parse(result[0].jsonMockResp);
-      setMockInterviewQuestion(jsonMockResp);
+      // Assuming the questions are in a 'questions' property
+      setMockInterviewQuestion(jsonMockResp.questions || jsonMockResp);
       setInterviewData(result[0]);
     } catch (error) {
       console.error("Failed to fetch interview details:", error);
