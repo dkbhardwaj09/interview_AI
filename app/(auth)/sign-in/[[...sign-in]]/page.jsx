@@ -28,7 +28,7 @@ export default function Page() {
         </a>
 
         <h2 className="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
-          Welcome to PrepsterAI: AI Powered Mock Interviewer ✨
+          Welcome to NextHireAI: AI Powered Mock Interviewer ✨
         </h2>
 
         <p className="mt-4 leading-relaxed text-white/90">
@@ -50,7 +50,7 @@ export default function Page() {
   <img src="https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvdXBsb2FkZWQvaW1nXzJwd2JIM1BIdWFRREI1U1d4SXpPTHJXTWU2eSJ9?width=200" alt="Home" />
 </a>
           <h1 className="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
-            Welcome to Prepster AI
+            Welcome to NextHire AI
           </h1>
 
           <p className="mt-4 leading-relaxed text-gray-500">
